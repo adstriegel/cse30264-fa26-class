@@ -1,4 +1,4 @@
-# Prompt / Discussion - Lecture 01 - 08-26-26
+# Prompt / Discussion - Lecture 02 - 08-26-26
 
 ## Prompt
 
