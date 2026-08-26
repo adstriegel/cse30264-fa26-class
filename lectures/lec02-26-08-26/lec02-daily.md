@@ -9,6 +9,7 @@ We will go through the types of delay in more detail and then walk through the H
 * Today (Wednesday) - Chapter 1
 * Monday - Chapter 2 (Applications)
    * [Davies / Peterson - Chapter 9 as an alternative](https://book.systemsapproach.org/applications.html)
+   * [Prompt](../lec03-26-08-31/discuss-prompt.md) - Prompt for next lecture
 
 As you are read Chapter 1, think about the following questions:
 
