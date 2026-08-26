@@ -22,9 +22,14 @@ As you are read Chapter 1, think about the following questions:
 
 * This Handout
 * [Prompt](./discuss-prompt.md) - Key points for a junior S/W engineer about the history of the Internet
+* [Homework 1](../../homework/hw01/hw01.md)
+
+## Related Content
+
 * [Example](./example-curl/script-curl.sh) - Shell script - periodic curl
 * [Example](./example-curl/26-07-16-R2-access.log) - Apache access log
-* [Homework 1](../../homework/hw01/hw01.md)
+* [Kleinrock - IMP](https://www.youtube.com/watch?v=yU9oMOcRsuE)
+* [Audio - Dialup](https://www.youtube.com/watch?v=gsNaR6FRuO0)
 
 ## Key Points
 
