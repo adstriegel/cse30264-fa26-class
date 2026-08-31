@@ -41,6 +41,6 @@ As you are reading about the Application Layer, think about the following questi
 | **Date** | **Item** | **Topic** |
 |---|---|---|
 | 08-31 (M) | Reading | Chapter 2 - Application Layer - Kurose / Ross |
-| 09-06 (Sun) | Assignment | Homework 2 - Wireshark + Prompts |
+| 09-06 (Sun) | [Assignment]((https://canvas.nd.edu/courses/145183/assignments/498192)) | [Homework 2 - Wireshark + Prompts](../../homework/hw02/hw02.md) |
 | 09-07 (M) | Reading | Chapter 3 - Transport Layer |
 | 09-13 (Sun) | Assignment | Homework 3 - Analysis + Prompts |
