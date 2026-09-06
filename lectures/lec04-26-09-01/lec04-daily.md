@@ -12,6 +12,8 @@ We will wrap up the Application Layer (Layer 7) from the Kurose / Ross book divi
 ## Handouts
 
 * This Overview
+* [Prompt](./discuss-prompt.md)
+* [Phishing Prompt](./probe-phish.md)
 
 ## Key Points
 
