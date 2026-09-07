@@ -34,6 +34,6 @@ We have a small bit of lecture material with regards to SMTP, P2P, and CDNs to f
 | 09-06 (Sun) | [Assignment]((https://canvas.nd.edu/courses/145183/assignments/498192)) | [Homework 2 - Wireshark + Prompts](../../homework/hw02/hw02.md) |
 | 09-07 (M) | Reading | Chapter 3 - Transport Layer |
 | 09-13 (Sun) | Assignment | Homework 3 - Analysis + Prompts |
-| 09-13 (Sun) | Assignment | Group Selection / Repo Sharing |
+| 09-20 (Sun) | Assignment | Group Selection / Repo Sharing |
 
 Coding Project 1 will be assigned next week.  You will need to identify your group members and share a single repository with Prof. Striegel and the TA.  See Canvas for instructions.
