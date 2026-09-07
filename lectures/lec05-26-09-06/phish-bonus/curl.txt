@@ -1,0 +1,23 @@
+% curl https://tinyurl.com/2aumefnb
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='https://invitationshare.invi.cc.cd/doc/invitation/'" />
+
+        <title>Redirecting to https://invitationshare.invi.cc.cd/doc/invitation/</title>
+    </head>
+    <body>
+        Redirecting to <a href="https://invitationshare.invi.cc.cd/doc/invitation/">https://invitationshare.invi.cc.cd/doc/invitation/</a>.
+    </body>
+</html>
+
+% nslookup invitationshare.invi.cc.cd
+Server:		66.205.160.99
+Address:	66.205.160.99#53
+
+Non-authoritative answer:
+Name:	invitationshare.invi.cc.cd
+Address: 172.67.144.53
+Name:	invitationshare.invi.cc.cd
+Address: 104.21.57.86

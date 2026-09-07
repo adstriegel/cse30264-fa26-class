@@ -1,0 +1,176 @@
+Delivered-To: aaron.striegel@gmail.com
+Received: by 2002:a05:6674:1591:b0:74a:d458:7042 with SMTP id rb17csp12053875pxc; Mon, 7 Sep 2026 06:53:16 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AKwUvBwI4e015py7fyduYBw0kdymaFWDKM0emmEOxsATgTAu7sf+Jfr3aHecaw3q0yeWMVzVIPKJ8FAL6h9PSSrdsA==@gmail.com
+X-Received: by 2002:a05:6830:67e7:b0:7fa:5c49:5250 with SMTP id 46e09a7af769-7fa5c495568mr14865529a34.23.1788789195872; Mon, 07 Sep 2026 06:53:15 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1788789195; cv=pass; d=google.com; s=arc-20260327; b=H9uKH1wzJaJjZcDEKHKXSlJjPp/XTsOQ1DfeC96zl5LwwtXrH2wSqv4TyCZkP5ZoyU QzR4ixaOkbcZJv5g8HEdGsIP/rz+nWj6enPoKwU7TSWM/B6sf34RfYWxjuxOYwolaSij yj1iFQ5uRgGkHgqVKHnSvlfIjLhFyqi2dhtJ5UTCNx+VM/vacFDuMhuqz9s6PcQHUrVN 9FwuZJzvGb0T/KjnqQgovV9zWYZQNk19Blujnstd23FUZdGTkgLlC+V7P6QR3VNbyiZN IFQqBR561LV2k3OYiQsVBJ94bDsThY5Lq5F7QImlpNUlkyrhUKSENOxY0Qn2ZhP8OUEz uITA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=cc:subject:message-id:date:from:mime-version:dkim-signature; bh=d3qPdRMHn9B3OUsij5iJ2qCn21I0K7HS4Q4KezW+oCY=; fh=6YpOc+Akp/Z48cI/gp8HfUOMLIlnfzigJloLv+AoO4A=; b=axPKzN02NUKfT35ckqZLqW07Nq+O944ZEG/XhbsMLSFSnKDSZBAJ9rBFAYQlApnR4q D0/lxR+vWcYwmf2q2BWROWcsnv1BzWdfApo9ybrA9/p6t3o4VTRn3r9Z6wozw+sNzC+s LpRlPODgNaphn/w7w3wD2SxPVXaE/92x4zfnQ57FqkVH8cwV/1F6aPZWh7Bm2A+P7R4n t4iuBly+qCA+09SjYAygv8UYJvOxExcsXrgd8pCb67Yb6uwKVgGcV++hjKvFzQZDzJVp cpFbEBZ8cOEPGkfzaPPUA0heZKZ+7DzbYnt0iR8Cxp1gP+/nNEYJMhi3DqO0JCl/WWDr Hf7Q==; dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com; dkim=pass header.i=@stpius-net.20251104.gappssmtp.com header.s=20251104 header.b=LvbE2CZ7; arc=pass (i=1); spf=pass (google.com: domain of xxx-changed@stpius.net designates 209.85.220.65 as permitted sender) smtp.mailfrom=xxx-changed@stpius.net; dara=pass header.i=@gmail.com
+Return-Path: <xxx-changed@stpius.net>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65]) by mx.google.com with SMTPS id 46e09a7af769-7f9f6fb78e8sor3790069a34.11.2026.09.07.06.53.15 for <aaron.striegel@gmail.com> (Google Transport Security); Mon, 07 Sep 2026 06:53:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of xxx-changed@stpius.net designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com; dkim=pass header.i=@stpius-net.20251104.gappssmtp.com header.s=20251104 header.b=LvbE2CZ7; arc=pass (i=1); spf=pass (google.com: domain of xxx-changed@stpius.net designates 209.85.220.65 as permitted sender) smtp.mailfrom=xxx-changed@stpius.net; dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1788789195; cv=none; d=google.com; s=arc-20260327; b=YWZGwiEvFBwr5aKDGW90ZTYcN32di+caIWGePLwy2XThNpqlS/Oyk1VxE+n2y5ZdFJ h9TzSPWahyRdJIR3kg4ZVABuRb7N8/MhdSxgEFW7g8yMoLUOmbFWv9UZCbL5vl1UxPUA RZLolMnnoVyzFiig8JXUAu2Zg5FepK/xGkNgD/MFba4eANsR6MHYdVfcgUcjpoKEgF7D M/9IEkbQz+4OmXb7DrMX1cwAx6Ih3VxraofnVP+INx8Nkk3f4d0vy/w1cvIJC1SZBrOQ 4zPxmmQp0jedwu3wlTCNehI5PidPaMvDhsd6Fso8l9N5yKYcSLj6wO8RuQu3AsgnOvli P8TQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=cc:subject:message-id:date:from:mime-version:dkim-signature; bh=d3qPdRMHn9B3OUsij5iJ2qCn21I0K7HS4Q4KezW+oCY=; fh=6YpOc+Akp/Z48cI/gp8HfUOMLIlnfzigJloLv+AoO4A=; b=CI8Y1Yri2AFE4+isQr/uBOCR1MAoiWIdI0Hupr0Vd482ZFrXX2c43z/NaV8tA116tW zZN3F291M/lNANOReHNPzgHjWVtcxRJUFLsn+Gi+hoUpcthrYpw+p/47c29n9B0nYjJ3 2nmlk+sqovYJsRyJtqEgIb3vWE97/FkYHtnMsuXUosyUSdeDQzRVlOIY+o81hg1sk1ic XlsK3rqL0zDXmp+f9eyRX4R9hESvD2yBzXTVZePRRegDalIlA5yRo1ES4pKxBhVf0kYF DLsWOLIDY31CvDStJqzNbC0xIVGNNbXNLKpB5igdLVIRXj4N/h3r/aj6i17gELkaomuk e4cg==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=stpius-net.20251104.gappssmtp.com; s=20251104; t=1788789195; x=1789393995; dara=google.com; h=content-type:cc:subject:message-id:date:from:mime-version:from:to :cc:subject:date:message-id:reply-to:content-type; bh=d3qPdRMHn9B3OUsij5iJ2qCn21I0K7HS4Q4KezW+oCY=; b=LvbE2CZ7H3KJjvy2Ip3ZzlWxQqskXXnPmrQoTIsyiFlxqJXal6jZgKMubtehToivct aO/vhnt6LUqJR0+vJUX28yMkwfZRRxt7Ama9b1kkgNYl3VkfPryc0K3Wn368SmvSoCCF uNL+g84a0q+hu08Nwokx5zMyB7nHe+ZjYfN1CoYL+dv4U6gSiStce+RoWjfmVD4/I11c el/giKb6QEyQW7vPIG2i34hIVN41camSUtSBGSZ/U966dP1Fv9zGTe8pmG4VzCkjHFpJ LbSXR1deBaGq/kGW+tXkKeGPVcCaA7R71Z7pvPZvCmceXCZaeLC2pMXT1wmjzt+k49/C 8ZDQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20251104; t=1788789195; x=1789393995; h=content-type:cc:subject:message-id:date:from:mime-version:x-gm-gg :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to :content-type; bh=d3qPdRMHn9B3OUsij5iJ2qCn21I0K7HS4Q4KezW+oCY=; b=mb6+XdXji81xXZrkrEwwHA2oHlQYk3Y9DkMlzBD8SHgjcOXqgTtIr5rgFF1m5TkNnP rPBEag/+3SQ/s37srFLVEuIeKX1y7KjaU5B2e5PBH0onAP9gEc3y8Xs7yUWp7CqaHCah dzzxHDr/Kmy7nehZZd7aQTP3CILrB2ixkLkGPaVPTXsMNaT+JfxOWvI8WAcYvKSNEvdm fL2xakvSzpdthuc5kX/0n9LMHkLCGjc+Zro3k6WHxpbAPNWB5w0NO0wOMChXz7FU5ivA AGsdZN1uj2xgRtJhiWklQwjTRMydrMmXef1qCHcWCTyxzJ188sAvppy1CU6bjnyfnTFk k7+g==
+X-Forwarded-Encrypted: i=1; AKwUvBwq8/SMN7nHn+4qsAfmn2ozDKi9bsXFotLQjNoy6Qyd9fvU8JhXrELLkAFcBYeIIqPtpfBMLmy21d7LlzYTXA==@gmail.com
+X-Gm-Message-State: AFuF++lkvqMQdFJ9TvM1oO8XNR84s6b7gis3gOlgHoS35qEFBq1eKN7N z+MSLiamIKFYaBjRyzeSCm4EX/wPzXJXy8knhIrvNZUBWumoOzQbQT+2JByDgOhSoRnWxNuTcHH R2bMBKsBHFXeNbc8Xb1WfH5MaYC/FEGPx4+0O3EgY8FyUs7vW9r1r/EhcsN8IoatCorM8kTw=
+X-Gm-Gg: AYBFou3tyWoXeKmLfFUYJNubrrNXz9OHG8cR5urYX7pqytUO/g2tUeYZPJWE4gtrJeQ FNh3SHHjZRH+nH57kz/30v55DaA5iD96KTkv1h1KQ+vNE/+fgFWdYXOY0XbTQ2SZa4YARRqpqPf 5SxiTSP2fDnsdeN+7yRE5vyNtCns3eiXiwzxUb/+8xssxTLYj191OeIl2Js3NTZQCIod/bijOH3 fSmpX3+Lw4grV01/FGuTsqSpNBwz7jZLTnl4RHsRE14+vYijf4fb5JhLkoyQZKOMTJJ4PzCfTMV KsExV4tn9BjXViRK4mGNWiVWlo3jXJ17yvjp4txHqmnSAi72758eoo6uP18EhA88ImSBVwor1OZ L48aaEma5C/hjvx4sVryxKZIdhpPHZo+NwA==
+X-Received: by 2002:a05:6820:2903:b0:6b7:46fc:1d6 with SMTP id 006d021491bc7-6b746fc0315mt13163838eaf.53.1788789195016; Mon, 07 Sep 2026 06:53:15 -0700 (PDT)
+MIME-Version: 1.0
+From: XXX YYYY <xxx-changed@stpius.net>
+Date: Mon, 7 Sep 2026 06:53:02 -0700
+X-Gm-Features: AcwNN1XTg-alA2i6ctvGFnKMBC6WjoeFdEpssc5iiIKU3e2vSJ6YJb1lE_SFCGo
+Message-ID: <CALkhSJS6nT187C9Ap4hr5u6kD3Sd2fMBcgvxmPJ=oye5=hYxQA@mail.gmail.com>
+Subject: you're cordially invited
+Cc: XXX - Removed in a post edit - XXX
+Content-Type: multipart/alternative; boundary="0000000000008dc35a065ae4f0e5"
+
+--0000000000008dc35a065ae4f0e5
+Content-Type: text/plain; charset="UTF-8"
+
+[image: Punchbowl]
+
+You're invited! Please click on the invitation to see more details and to
+RSVP.
+
+XXX YYYY sent you an invitation.
+
+*[image: Shhhhhh]* <https://tinyurl.com/2aumefnb>
+
+*[image: Open your invitation]* <https://tinyurl.com/2aumefnb>
+
+Don't want invitations from this host? *Remove yourself*
+<https://tinyurl.com/2aumefnb>.
+If you can't see the above invitation, *click here*
+<https://tinyurl.com/2aumefnb>.
+Add *mail@mail.punchbowl.com* <https://tinyurl.com/2aumefnb> to your
+address book to ensure you receive all invitations and cards in your inbox
+To learn about our privacy policy, *click here*
+<https://tinyurl.com/2aumefnb>.
+
+--0000000000008dc35a065ae4f0e5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div style=3D"margin:0px;padding-bottom:20px;min-widt=
+h:0px"><div id=3D"gmail-:nh" style=3D"margin:8px 0px 0px"><div id=3D"gmail-=
+:ni"><div id=3D"gmail-avWBGd-48"><div style=3D"letter-spacing:-0.32px;font-=
+family:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)"><span =
+style=3D"letter-spacing:-0.32px"><br></span></div><div><table style=3D"dire=
+ction:ltr;text-indent:0px;line-height:1.5;width:540px;max-width:540px;color=
+:rgb(51,51,51);border-collapse:collapse;border-spacing:0px"><tbody><tr><td =
+align=3D"center" style=3D"direction:ltr;line-height:1.5"><span style=3D"fon=
+t-family:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)"><img=
+ src=3D"https://static.punchbowl.com/assets/logos/punchbowl/logo_punchbowl-=
+27b5ac89faa0f8d34acac622e4aa8e6a5fb1cb41010a944e2fe5feabbd3c3034.png" alt=
+=3D"Punchbowl" width=3D"145" style=3D"width: 145px; max-width: 513px; margi=
+n: 0px auto; padding-bottom: 20px; display: block;"></span></td></tr><tr><t=
+d align=3D"center" style=3D"direction:ltr;line-height:1.5"><div style=3D"ma=
+rgin:0px auto;padding-top:20px;padding-bottom:20px;border-top:1px solid rgb=
+(204,204,204)"><div><table align=3D"center" style=3D"direction:ltr;text-ind=
+ent:0px;line-height:1.5;margin:0px auto;width:540px;border-collapse:collaps=
+e;border-spacing:0px"><tbody><tr><td style=3D"direction:ltr;line-height:1.5=
+"><div id=3D"m_-8966959556734352347gmail-ydp17dc3d3dm_-3706867096357255195g=
+mail-ydp80d0c2cm_7676636019161727505m_8804199576576646874m_-534452875676442=
+4265m_-3115951909188923790m_-1230433022737605683gmail-x_x_x_x_x_x_x_gmail-x=
+_x_x_x_m_-6880438819257256499m_1324344774275675376preview_email_body" style=
+=3D"margin:0px"><div style=3D"direction:ltr;text-align:center;line-height:1=
+.5;margin:1em 0px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;c=
+olor:rgb(0,0,0)">You&#39;re invited! Please click on the invitation to see =
+more details and to RSVP.</div></div></td></tr><tr><td style=3D"direction:l=
+tr;line-height:20px;min-height:20px"><div style=3D"direction:ltr;line-heigh=
+t:20px;margin:0px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;c=
+olor:rgb(0,0,0)">=C2=A0</div></td></tr><tr><td style=3D"direction:ltr;text-=
+align:center;line-height:1.5;color:rgb(102,102,102)"></td></tr><tr><td alig=
+n=3D"center" style=3D"direction:ltr;line-height:1.5"><div id=3D"m_-89669595=
+56734352347gmail-ydp17dc3d3dm_-3706867096357255195gmail-ydp80d0c2cm_7676636=
+019161727505m_8804199576576646874m_-5344528756764424265m_-31159519091889237=
+90m_-1230433022737605683gmail-x_x_x_x_x_x_x_m_5769829769585755562card_Email=
+FromName" style=3D"margin:0px 0px 10px"><div style=3D"direction:ltr;line-he=
+ight:1.5;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(=
+0,0,0)">XXX YYYY sent you an invitation.</div></div><div id=3D"m_-896=
+6959556734352347gmail-ydp17dc3d3dm_-3706867096357255195gmail-ydp80d0c2cm_76=
+76636019161727505m_8804199576576646874m_-5344528756764424265m_-311595190918=
+8923790m_-1230433022737605683gmail-x_x_x_x_x_x_x_m_5769829769585755562card_=
+EmailFromName" style=3D"margin:0px 0px 10px"><div style=3D"direction:ltr;li=
+ne-height:1.5;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;color=
+:rgb(0,0,0)"><br></div></div><div style=3D"direction:ltr;line-height:1.5;ma=
+rgin:0px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(=
+17,85,204)"><a href=3D"https://tinyurl.com/2aumefnb" id=3D"gmail-OWA02eb58d=
+2-fde3-8a0d-ec1e-b84d344d8cb8" class=3D"gmail-OWAAutoLink" title=3D"https:/=
+/tinyurl.com/5ecx4nbp" style=3D"text-decoration:none"><u><img src=3D"https:=
+//static.punchbowl.com/attachments/invitations/2025/08/c9927448f5a421907651=
+/envelope/689f2cd9c74f670002eea341.jpg" alt=3D"Shhhhhh" id=3D"m_-8966959556=
+734352347gmail-ydp17dc3d3dm_-3706867096357255195gmail-ydp80d0c2cm_767663601=
+9161727505m_8804199576576646874m_-5344528756764424265m_-3115951909188923790=
+m_-1230433022737605683gmail-x_x_x_x_x_x_x_gmail-x_x_x_x_m_-6880438819257256=
+499m_1324344774275675376email_preview_image" width=3D"513" style=3D"width: =
+513px; max-width: 513px; margin: 0px;"></u></a></div></td></tr><tr><td styl=
+e=3D"direction:ltr;line-height:20px;min-height:20px"><div style=3D"directio=
+n:ltr;line-height:20px;margin:0px;font-family:Calibri,Helvetica,sans-serif;=
+font-size:12pt;color:rgb(0,0,0)">=C2=A0</div></td></tr><tr><td style=3D"dir=
+ection:ltr;text-align:center;line-height:1.5"><div style=3D"direction:ltr;l=
+ine-height:1.5;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;colo=
+r:rgb(17,85,204)"><a href=3D"https://tinyurl.com/2aumefnb" id=3D"gmail-OWAb=
+5540575-0bde-79e0-c624-3dbd7fa9cf07" class=3D"gmail-OWAAutoLink" title=3D"h=
+ttps://tinyurl.com/5ecx4nbp" style=3D"text-decoration:none"><u><img src=3D"=
+https://static.punchbowl.com/assets/email/invite/btn_open_invitation_170x40=
+-2043cb1409508d6c811085ce14fa5f234f5d0bbb47c27d5ed15b2a1c95b5cd70.png" alt=
+=3D"Open your invitation" id=3D"m_-8966959556734352347gmail-ydp17dc3d3dm_-3=
+706867096357255195gmail-ydp80d0c2cm_7676636019161727505m_880419957657664687=
+4m_-5344528756764424265m_-3115951909188923790m_-1230433022737605683gmail-x_=
+x_x_x_x_x_image_0" width=3D"170" style=3D"width: 170px; max-width: 510px; m=
+argin: 0px;"></u></a></div></td></tr></tbody></table></div><div style=3D"di=
+rection:ltr;line-height:1.5;margin:0px;font-family:Calibri,Helvetica,sans-s=
+erif;font-size:12pt;color:rgb(0,0,0)"><img src=3D"https://www.punchbowl.com=
+/invitation/a2c7d61e8abe462e/t.gif" width=3D"1" height=3D"1" style=3D"width=
+: 1px; height: 1px; min-height: 1px; margin: 0px; display: block;"></div></=
+div></td></tr><tr><td style=3D"direction:ltr;line-height:20px;border-top:1p=
+x solid rgb(204,204,204);min-height:20px"><div style=3D"direction:ltr;line-=
+height:20px;margin:0px;font-family:Calibri,Helvetica,sans-serif;font-size:1=
+2pt;color:rgb(0,0,0)">=C2=A0</div></td></tr><tr><td style=3D"direction:ltr;=
+text-align:center;line-height:18px;padding-right:5px;padding-left:5px;color=
+:rgb(153,153,153)"><div style=3D"margin:0px;padding-right:5px;padding-left:=
+5px"><div style=3D"direction:ltr;line-height:18px;margin:0px;padding-bottom=
+:10px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt"><span style=
+=3D"color:rgb(0,0,0)">Don&#39;t want invitations from this host? </span><sp=
+an style=3D"color:rgb(17,85,204)"><a href=3D"https://tinyurl.com/2aumefnb" =
+id=3D"gmail-OWA0007cf8b-1da2-31bd-cefa-83c6ac34a750" class=3D"gmail-OWAAuto=
+Link" title=3D"https://tinyurl.com/5ecx4nbp"><u>Remove yourself</u></a></sp=
+an><span style=3D"color:rgb(0,0,0)">.</span></div><div style=3D"direction:l=
+tr;line-height:18px;margin:0px;padding-bottom:10px;font-family:Calibri,Helv=
+etica,sans-serif;font-size:12pt"><span style=3D"color:rgb(0,0,0)">If you ca=
+n&#39;t see the above invitation, </span><span style=3D"color:rgb(17,85,204=
+)"><a href=3D"https://tinyurl.com/2aumefnb" id=3D"gmail-OWAcb98e0fa-a612-da=
+96-6680-ab1ebab4b44c" class=3D"gmail-OWAAutoLink" title=3D"https://tinyurl.=
+com/5ecx4nbp"><u>click here</u></a></span><span style=3D"color:rgb(0,0,0)">=
+.</span></div></div></td></tr><tr><td style=3D"direction:ltr;text-align:cen=
+ter;line-height:18px;padding-right:5px;padding-left:5px;color:rgb(153,153,1=
+53)"><div style=3D"direction:ltr;line-height:18px;margin:0px;padding-bottom=
+:10px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt"><span style=
+=3D"color:rgb(0,0,0)">Add </span><span style=3D"color:rgb(17,85,204)"><a hr=
+ef=3D"https://tinyurl.com/2aumefnb" id=3D"gmail-OWAabc3cdc4-e0b3-8bbb-f7f6-=
+01e81a3396eb" class=3D"gmail-OWAAutoLink" title=3D"https://tinyurl.com/5ecx=
+4nbp"><u>mail@mail.punchbowl.com</u></a></span><span style=3D"color:rgb(0,0=
+,0)">=C2=A0to your address book to ensure you receive all invitations and c=
+ards in your inbox</span></div></td></tr><tr><td style=3D"direction:ltr;lin=
+e-height:1.5"><div style=3D"direction:ltr;text-align:center;line-height:18p=
+x;margin:0px;padding-right:5px;padding-bottom:10px;padding-left:5px;font-fa=
+mily:Calibri,Helvetica,sans-serif;font-size:12pt"><span style=3D"color:rgb(=
+0,0,0)">To learn about our privacy policy, </span><span style=3D"color:rgb(=
+17,85,204)"><a href=3D"https://tinyurl.com/2aumefnb" target=3D"_blank" id=
+=3D"gmail-OWAa223f16a-8747-1430-1d93-da56880d0433" class=3D"gmail-OWAAutoLi=
+nk" title=3D"https://newman.cc.cd/invitation/" rel=3D"nofollow"><u>click he=
+re</u></a></span><span style=3D"color:rgb(0,0,0)">.</span></div></td></tr><=
+/tbody></table></div><div style=3D"direction:ltr;line-height:1.5;letter-spa=
+cing:-0.32px;font-family:Calibri,Helvetica,sans-serif;font-size:12pt;color:=
+rgb(0,0,0)"><span style=3D"letter-spacing:-0.32px"><br></span></div><div st=
+yle=3D"direction:ltr;line-height:1.5;font-family:Calibri,Helvetica,sans-ser=
+if;font-size:12pt;color:rgb(0,0,0)"><br></div></div></div></div></div><div =
+style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(=
+0,0,0)"></div></div><div dir=3D"ltr" class=3D"gmail_signature" data-smartma=
+il=3D"gmail_signature"><div></div></div></div>
+
+--0000000000008dc35a065ae4f0e5--
