@@ -1,4 +1,4 @@
-# Discussion Prompt - 09-08-26 - Transport Layer
+# Discussion Prompt - 09-09-26 - Transport Layer
 
 While we will be discussing TCP, we will do a TCP adjacent prompt related to the lectures from last week on HTTP and the Application Layer. This prompt and response gets into the nuance of the differences in various versions of HTTP and how HTTP/3 actually brings in QUIC which runs on UDP instead of TCP.
 
