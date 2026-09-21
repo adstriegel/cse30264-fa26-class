@@ -3,6 +3,7 @@
 The focus of Coding Project 1 is to give you a project of reasonable complexity split into appropriate size parts.  Parts 1 and 2 focus on the "guts" of networking protocols and system calls interactions while crossing languages (Python and C). Part 1 focuses on a hybrid file transfer protocol over TCP.  Part 2 brings in a UDP-based dispatcher. In Part 3, you will be asked to add features commensurate with your group size to the overall system.
 
 | **Due Date** | **Part / Description** |
+|---|---|
 | 10-04-26 | Part 1 - Grab Client |
 | 11-01-26 | Part 2 - Dispatch + Work |
 | 11-15-26 | Part 3 - Multiple Clients, Group-Proposed Features |
@@ -97,7 +98,7 @@ C->GS|INFO F001.txt SweetAuth
 GS->C|INFO-RESP WRONGAUTH F001.dat
 
 C->GS|INFO F001.dat SweetAuth
-GS->C|INFO-RESP OK F001.dat xxxxx (long MD5)
+GS->C|INFO-RESP OK F001.dat 15 5cdba7cb556dd21f793c8d60a2150211
 
 C->GS|GRAB F001.dat SweetAuth
 S2->C|GRAB-RESP OK F001.txt HelloWorld--!--
