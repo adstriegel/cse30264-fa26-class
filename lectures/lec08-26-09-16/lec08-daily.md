@@ -40,7 +40,7 @@ In Lecture 7, we started in earnest on the material with respect to congestion c
 |---|---|---|
 | 09-07 (M) | Reading | Chapter 3 - Transport Layer |
 | 09-16 (W) | Reading | [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/) - Chapters 3, 5, 6 |
-| 09-29 (Sun) | Assignment | Homework 4 - Socket (C) + Short Answer |
+| 09-20 (Sun) | Assignment | Homework 4 - Socket (C) + Short Answer |
 | 09-20 (Sun) | Assignment | Group Selection / Repo Sharing |
 | 09-21 (M) | Reading | Chapter 4 - Data Plane |
 

@@ -47,5 +47,5 @@ In Lecture 6, we looked at how TCP delivered reliability moving from the imagina
 |---|---|---|
 | 09-07 (M) | Reading | Chapter 3 - Transport Layer |
 | 09-16 (W) | Reading | [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/) - Chapters 3, 5, 6 |
-| 09-29 (Sun) | Assignment | Homework 4 - Socket (C) + Short Answer |
+| 09-20 (Sun) | Assignment | Homework 4 - Socket (C) + Short Answer |
 | 09-20 (Sun) | Assignment | Group Selection / Repo Sharing |
