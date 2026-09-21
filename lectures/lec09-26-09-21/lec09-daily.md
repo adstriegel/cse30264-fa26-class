@@ -35,6 +35,8 @@ In Lecture 8, we did a deep dive on socket programming, specifically going throu
 
 ## Looking Ahead
 
+On Wednesday, we will be switching over to the data plane (Chapter 4).
+
 ## Upcoming Deadlines
 
 | **Date** | **Item** | **Topic** |
