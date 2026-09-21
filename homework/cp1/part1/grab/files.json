@@ -1,0 +1,9 @@
+[
+   { "File" : "data/F001.dat", "Auth" : "AuthSimple" },
+   { "File" : "data/F002.dat", "Auth" : "AFE4c3982a" },
+   { "File" : "data/F003.dat", "Auth" : "BooBadgers" },
+   { "File" : "data/F004.dat", "Auth" : "BooSparty" },
+   { "File" : "data/FB001.dat", "Auth" : "BinaryFilePNG" },
+   { "File" : "data/FB001.dat", "Auth" : "BinaryFileTwo" },
+   { "File" : "data/FB001.dat", "Auth" : "BinaryOwls" }
+]

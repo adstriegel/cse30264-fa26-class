@@ -1,0 +1,8 @@
+# Comments in the mix
+F001.dat 127.0.0.1 54000 AuthSimple
+F002.dat 127.0.0.1 54000 AuthSecond
+F003.dat 127.0.0.1 54000 BooBadgers
+# Bad authorization
+F004.dat 127.0.0.1 54000 BooSparty!
+# Unknown file
+F100.dat 127.0.0.1 54000 BooOwls
