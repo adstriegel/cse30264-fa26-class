@@ -4,6 +4,6 @@
    { "File" : "data/F003.dat", "Auth" : "BooBadgers" },
    { "File" : "data/F004.dat", "Auth" : "BooSparty" },
    { "File" : "data/FB001.dat", "Auth" : "BinaryFilePNG" },
-   { "File" : "data/FB001.dat", "Auth" : "BinaryFileTwo" },
-   { "File" : "data/FB001.dat", "Auth" : "BinaryOwls" }
+   { "File" : "data/FB002.dat", "Auth" : "BinaryFileTwo" },
+   { "File" : "data/FB003.dat", "Auth" : "BinaryOwls" }
 ]
