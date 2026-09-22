@@ -20,7 +20,7 @@ import socket
 import json
 import hashlib
 
-
+# Retrieve a MD5 hash of the file content
 def get_md5(filename):
    hash_object = hashlib.md5()
    with open(filename, "rb") as f:
@@ -126,57 +126,110 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
    # Loop forever
    while True:
-      conn, addr = s.accept()
-      with conn:
-         print(f"Connected by {addr}")
+      try:
+         print('Waiting for a new connection....')
+         conn, addr = s.accept()
 
-         while True:
+         with conn:
+            print(f"Connected by {addr}")
 
-            data = conn.recv(1024)
-            if not data:
-               break
+            while True:
 
-            if args.verbose:
-               print(f"{ThePktCount} Received a read of {len(data)} from client: {data.decode()}")
-
-            theRequest = data.decode()
-
-            if theRequest.startswith('INFO'):
-               if args.verbose:
-                  print(' -> INFO request identified')
-
-               theTokens = theRequest.split(' ')
+               data = conn.recv(1024)
+               if not data:
+                  break
 
                if args.verbose:
-                  print(f" -> {len(theTokens)} parts detected")
+                  print(f"{ThePktCount} Received a read of {len(data)} from client: {data.decode()}")
 
-               if len(theTokens) < 3:
-                  print(f"Error: Too few parts ({len(theTokens)}) to the INFO request")
-                  # Send a response back
-                  theResponse = "INFO-RESP ERR-FMT"
-                  conn.send(theResponse.encode('utf-8'))
-                  continue
-               elif len(theTokens) > 3:
-                  print(f"Warning: Too many parts ({len(theTokens)}) to the INFO request")
+               theRequest = data.decode()
 
-               TheCommand = theTokens[0]
-               TheFileReq = theTokens[1]
-               TheAuth = theTokens[2]
+               if theRequest.startswith('INFO'):
+                  if args.verbose:
+                     print(' -> INFO request identified')
 
-               if args.verbose:
-                  print(f'--> Command: {TheCommand} len={len(TheCommand)}')
-                  print(f'--> File:    {TheFileReq} len={len(TheFileReq)}')
-                  print(f'--> Auth:    {TheAuth} len={len(TheAuth)}')
+                  theTokens = theRequest.split(' ')
 
-               if TheFileReq in ConfirmedList:
-                  if ConfirmedList[TheFileReq]["Auth"] == TheAuth:
-                     theResponse = "INFO-RESP OK " + TheFileReq + " " + str(ConfirmedList[TheFileReq]["FileSize"]) + " " + str(ConfirmedList[TheFileReq]["MD5"])
+                  if args.verbose:
+                     print(f" -> {len(theTokens)} parts detected")
+
+                  if len(theTokens) < 3:
+                     print(f"Error: Too few parts ({len(theTokens)}) to the INFO request")
+                     # Send a response back
+                     theResponse = "INFO-RESP ERR-FMT"
                      conn.send(theResponse.encode('utf-8'))
+                     continue
+                  elif len(theTokens) > 3:
+                     print(f"Warning: Too many parts ({len(theTokens)}) to the INFO request")
+
+                  TheCommand = theTokens[0]
+                  TheFileReq = theTokens[1]
+                  TheAuth = theTokens[2]
+
+                  if args.verbose:
+                     print(f'--> Command: {TheCommand} len={len(TheCommand)}')
+                     print(f'--> File:    {TheFileReq} len={len(TheFileReq)}')
+                     print(f'--> Auth:    {TheAuth} len={len(TheAuth)}')
+
+                  if TheCommand != "INFO":
+                     theResponse = "INFO-RESP ERR " + TheFileReq + " Unknown-INFO-Command"
+                     conn.send(theResponse.encode('utf-8'))
+                     continue
+
+                  if TheFileReq in ConfirmedList:
+                     if ConfirmedList[TheFileReq]["Auth"] == TheAuth:
+                        theResponse = "INFO-RESP OK " + TheFileReq + " " + str(ConfirmedList[TheFileReq]["FileSize"]) + " " + str(ConfirmedList[TheFileReq]["MD5"])
+                        conn.send(theResponse.encode('utf-8'))
+                     else:
+                        print(f'Wrong Auth: Received {TheAuth} - expected {ConfirmedList[TheFileReq]["Auth"]}')
+                        theResponse = "INFO-RESP WRONGAUTH " + TheFileReq
+                        conn.send(theResponse.encode('utf-8'))
                   else:
-                     print(f'Wrong Auth: Received {TheAuth} - expected {ConfirmedList[TheFileReq]["Auth"]}')
+                     print('Error: File not found in the list')
                      theResponse = "INFO-RESP WRONGAUTH " + TheFileReq
                      conn.send(theResponse.encode('utf-8'))
-               else:
-                  print('Error: File not found in the list')
-                  theResponse = "INFO-RESP WRONGAUTH " + TheFileReq
-                  conn.send(theResponse.encode('utf-8'))
+               elif theRequest.startswith("GRAB"):
+                  if args.verbose:
+                     print(' -> GRAB request identified')
+
+                  theTokens = theRequest.split(' ')
+
+                  if args.verbose:
+                     print(f" -> {len(theTokens)} parts detected")
+
+                  if len(theTokens) < 3:
+                     print(f"Error: Too few parts ({len(theTokens)}) to the GRAB request")
+                     # Send a response back
+                     theResponse = "GRAB-RESP ERR-FMT"
+                     conn.send(theResponse.encode('utf-8'))
+                     continue
+                  elif len(theTokens) > 3:
+                     print(f"Warning: Too many parts ({len(theTokens)}) to the GRAB request")
+
+                  TheCommand = theTokens[0]
+                  TheFileReq = theTokens[1]
+                  TheAuth = theTokens[2]
+
+                  if TheFileReq in ConfirmedList:
+                     if ConfirmedList[TheFileReq]["Auth"] == TheAuth:
+                        theResponse = "GRAB-RESP OK " + TheFileReq + " "
+                        conn.send(theResponse.encode('utf-8'))
+
+                        NetFilePath = args.prefix + TheFileReq
+                        with open(NetFilePath, "rb") as f:
+                           while chunk := f.read(4096):
+                              print(f'Sending a chunk of {len(chunk)} bytes')
+                              conn.send(chunk)
+
+                     else:
+                        print(f'Wrong Auth: Received {TheAuth} - expected {ConfirmedList[TheFileReq]["Auth"]}')
+                        theResponse = "GRAB-RESP WRONGAUTH " + TheFileReq
+                        conn.send(theResponse.encode('utf-8'))
+                  else:
+                     print('Error: File not found in the list')
+                     theResponse = "GRAB-RESP WRONGAUTH " + TheFileReq
+                     conn.send(theResponse.encode('utf-8'))
+      except ConnectionResetError as e:
+         print('DONE - Connection Complete')
+         # This is actually not a problem - just ignore it
+         pass
