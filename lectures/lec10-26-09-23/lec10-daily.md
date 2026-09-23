@@ -8,6 +8,7 @@ At the start of the lecture, we will do a brief recap about QUIC as well as quic
 
 * Chapter 4 - Kurose / Ross - Data Plane
    * If you have not acquired the book, now is a great time to acquire it / switch over from Davies / Peterson
+* [Video - Overview - QUIC](https://www.youtube.com/watch?v=EkVd4k0R4Tw)
 
 ## Handouts
 
@@ -21,13 +22,6 @@ At the start of the lecture, we will do a brief recap about QUIC as well as quic
 * What is the difference between forwarding versus routing?
 * Compare / contrast: FIB, priority queueing, WFQ
 * What is a FIB?
-
-## Looking Ahead
-
-* Next Monday - Data Plane - Part 2
-   * Continue reading Chapter 4
-* Next Wednesday - Data Plane (Finish) + Control Plane - Part 1
-   * Read Chapter 5
 
 ## Upcoming Deadlines
 
