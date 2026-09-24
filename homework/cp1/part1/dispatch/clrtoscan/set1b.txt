@@ -1,1 +1,1 @@
-FB001.dat 127.0.0.1 54000 BinaryFilePNG
+data/FB001.dat 127.0.0.1 54000 BinaryFilePNG

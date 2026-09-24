@@ -1,1 +1,1 @@
-F001.dat 127.0.0.1 54000 AuthSimple
+data/F001.dat 127.0.0.1 54000 AuthSimple
