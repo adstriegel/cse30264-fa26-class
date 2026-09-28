@@ -2,7 +2,7 @@
 
 ## Prompt
 
-Explain the difference between IPv4 addresses that are listed as 129.74.*.* versus 129.74/16 and why or how those distinctions matter to a software engineer.
+Explain the difference between IPv4 addresses that are listed as `129.74.*.*` versus `129.74/16` and why or how those distinctions matter to a software engineer.
 
 Give an example of how those notations might be used.
 
