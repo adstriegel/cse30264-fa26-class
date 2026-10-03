@@ -162,6 +162,6 @@ Complete the following tasks to submit:
 
 ## Rubric
 
-To be added - each part will be worth 25 points
+[Rubric](./cp1-pt1-rubric.md)
 
 Each part is equally weighted though different in difficulty.  As you are just learning how to write socket code and more approrpiately debug socket code, this part will have *less* to do compared to Part 2 and Part 3.
