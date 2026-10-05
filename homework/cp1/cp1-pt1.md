@@ -132,6 +132,7 @@ You should generally be in the habit of doing a fresh pull from the repository a
 A few other notes:
 
 * You will be assigned a set of port numbers that are listed on Canvas.  These are port numbers that are exposed to machines on campus from the CSE student machines.
+   * This part has been removed.
 
 * Your code will need to eventually run on the student machine but you can do your initial testing on your own machine provided that the CSE student machines are accessible.
 
