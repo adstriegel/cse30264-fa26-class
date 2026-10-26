@@ -138,7 +138,7 @@ Complete the following tasks to submit:
 
 ## Rubric
 
-Rubric to be added the week before Fall Break
+Rubric to be added the week after Fall Break (Wed - 10/28)
 
 There is now more to do here but also more of the work is in Python.  In the last part, you will be given a bit more code but we will add in multiple clients, a dashboard, and actual analytics (you are emulating that with the random wait per set).
 
