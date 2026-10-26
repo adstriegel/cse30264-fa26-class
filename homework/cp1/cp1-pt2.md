@@ -53,6 +53,7 @@ Your enhanced client (`full-client`) should do the following:
 
 * It should take in the IP and port of the dispatch server.  It should also take in an ID and authorization information.
    * `./full-client 127.0.0.1 54057 RandomID AuthTestOnly39#`
+   * `./full-client 127.0.0.1 54102 GoIrishBeatStanford AuthTest`
 
 * On startup, it should connect to the server using that information.
 
@@ -60,7 +61,8 @@ Your enhanced client (`full-client`) should do the following:
 
 * If a `CLRTOSCAN` message is successfully received, it should use your code from Part 1 to fetch all of the files.
 
-* It should pause for somewhere between ten to twenty seconds and then repeat the process.  We will swap this out in Part 3.
+* It should pause for somewhere between ten to thirty seconds and then repeat the process.  We will swap this out in Part 3.
+   * You may wish to add a `--nosleep` flag that disables this option.
 
 * You should gracefully catch and handle Control-C.
 
@@ -80,6 +82,9 @@ Make a small Python script (`change-set`) to enable `CHANGESET`:
 C->S HELLO2 GoIrishBeatStanford SIMPLE AuthTestOnly39#
 S->C RHELLO2 OK GoIrishBeatStanford 127.0.0.1 32829 SIMPLE TheFoxJumps
 
+C->S RDYTOSCAN GoIrishBeatStanford OneSecondRemains
+S->C CLRTOSCAN BADPWD BadPassword
+
 C->S RDYTOSCAN GoIrishBeatStanford TheFoxJumps
 S->C CLRTOSCAN OK GoIrishBeatStanford 1 data/F001.dat 127.0.0.1 54000 AuthSimple
 
@@ -98,6 +103,8 @@ S->C CLRTOSCAN OK GoIrishBeatStanford 1 data/FB001.dat 127.0.0.1 54000 BinaryFil
 ```
 
 C2 is a different terminal and the secret set changing client.
+
+In the example above, the client authenticates via the `HELLO2` message.  It gets the token for interactions `TheFoxJumps` from the server which it uses for the subsequent `RDYTOSCAN` message. A potential bad password message is also included.
 
 ## Tasks - Part 2
 
@@ -122,6 +129,8 @@ Make a `README-Part2.md` for Part 2 information.
 
 * Everyone should be contributing to each part of the project which means commits of a reasonable size from all group members.  One evaluation item (homework) near the end will be to share an evaluation of your fellow group members and their respective contributions.
 
+* You do have some design freedom if something is not well defined.  State any key assumptions you are making in your `README-Part2.md` file.
+
 * All commits should start with `cp1-part2` as part of their commit message.
 
 * Generally, things will work best when you are on campus for testing.  While the VPN can be pretty solid for making you appear on campus, some things can sometimes act a bit weird.  Similarly, make sure you are on `eduroam` when working and are not on `nd-guest`.
@@ -134,7 +143,7 @@ Same mechanism as Part 1.
 
 Complete the following tasks to submit:
 
-* Make sure you have a `README.md` with any caveats or important notes for grading.
+* Make sure you have a `README-Part2.md` with any caveats or important notes for grading.
 * Create a final commit with the message `cp1-part2 SUBMISSION`.
 * Push your commit to your repository.
 * Submit the hash (full or shortened) to the text box via Canvas.
