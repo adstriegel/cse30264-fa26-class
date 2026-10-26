@@ -36,6 +36,9 @@ The senior researcher has asked you to update your client to support this new fu
 Your new Python code (`dispatch-server`) is requested to do the following:
 
 * The server should start up taking in an argument for which port, which set of data to provide (a specific JSON file), and an authorization file.  There should be default values for each of those settings elected by you.
+   * For the port, the default should be 54000.  Use `--port PORT` for the override where `PORT` is a number between 54000 and 54150.
+   * For the authorization file, use `--auth FILE` where `FILE` is the input CSV for authorization. See the `authlists` directory for examples (`homework/cp1/part1/dispatch/authlists`).  If no argument is specified, you may include a custom / pre-populated list.
+   * For the data to provide, use `--scansets FILE` where `FILE` is a specific JSON.  The `scansets` directory provides various examples.
 
 * Wait for UDP messages on that specific port.  It should wait for a while (one or two seconds) but not forever.
 

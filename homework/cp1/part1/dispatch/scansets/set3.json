@@ -1,0 +1,37 @@
+[
+   { "File" : "data/F001.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "AuthSimple"
+   },
+   { "File" : "data/F002.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "AFE4c3982a"
+   },
+   { "File" : "data/F003.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "BooBadgers"
+   },
+   { "File" : "data/F004.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "BooSparty"
+   },
+   { "File" : "data/FB001.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "BinaryFilePNG"
+   },
+   { "File" : "data/FB002.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "BinaryFileTwo"
+   },
+   { "File" : "data/FB003.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "BinaryOwls"
+   }
+]

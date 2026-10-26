@@ -1,0 +1,7 @@
+[
+   { "File" : "data/F001.dat",
+     "Server" : "127.0.0.1",
+     "Port" : 54000,
+     "Auth" : "AuthSimple"
+   }
+]
