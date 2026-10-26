@@ -42,7 +42,7 @@ Your new Python code (`dispatch-server`) is requested to do the following:
 * Process the `HELLO2` message.  Confirm that the `ID` provided by the client matches up correctly using one of the auth lists.  Generate a random string (nonce) of 8-12 characters for the `AUTHTOKEN` using the same `AUTHSIMPLE` auth mode.
    * Each client should get a different `AUTHTOKEN`.  If the same ID is used, only the new `AUTHTOKEN` should work.
 
-* Only accept `RDYTOSCAN` messages from clients that provide the correct `AUTHTOKEN` information.  The `AuthTestOnly39#` should not work on `RDYTOSCAN`, only `HELLO`.
+* Only accept `RDYTOSCAN` messages from clients that provide the correct `AUTHTOKEN` information.  The `AuthTestOnly39#` should not work on `RDYTOSCAN`, only `HELLO2`.
 
 * Using the information specified when the server started up, provide a properly formatted list.
 
@@ -131,7 +131,7 @@ Same mechanism as Part 1.
 
 Complete the following tasks to submit:
 
-* Make sure you have a `README.d` with any caveats or important notes for grading.
+* Make sure you have a `README.md` with any caveats or important notes for grading.
 * Create a final commit with the message `cp1-part2 SUBMISSION`.
 * Push your commit to your repository.
 * Submit the hash (full or shortened) to the text box via Canvas.
