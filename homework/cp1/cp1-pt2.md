@@ -70,7 +70,8 @@ Your enhanced client (`full-client`) should do the following:
 
 The researcher then wants you to add a new piece of functionality to the dispatch server.
 
-* If a `CHANGESET AUTH SetName` packet is received, it loads up the text file from the specific location to use as set information.  This should use a password of your choosing for the `AUTH` information.
+* If a `CHANGESET AUTH SetName` packet is received, it loads up the JSON (or text file) from the specific location to use as set information.  This should use a password of your choosing for the `AUTH` information.
+   * You may have it bring in a text file from the `clrtoscan` directory or bring in a json from the `scansets` directory. It is up to you - choose one (or both) but make sure to document your choice.
 
 Make a small Python script (`change-set`) to enable `CHANGESET`:
 
@@ -88,11 +89,13 @@ S->C CLRTOSCAN BADPWD BadPassword
 C->S RDYTOSCAN GoIrishBeatStanford TheFoxJumps
 S->C CLRTOSCAN OK GoIrishBeatStanford 1 data/F001.dat 127.0.0.1 54000 AuthSimple
 
+Client fetches the file
 15 seconds pass...
 
 C->S RDYTOSCAN GoIrishBeatStanford TheFoxJumps
 S->C CLRTOSCAN OK GoIrishBeatStanford 1 data/F001.dat 127.0.0.1 54000 AuthSimple
 
+Client fetches the file
 5 seconds pass, the CHANGESET client is run
 C2->S CHANGESET SecretPwd clrtoscan/set1b.txt
 
@@ -100,6 +103,8 @@ C2->S CHANGESET SecretPwd clrtoscan/set1b.txt
 
 C->S RDYTOSCAN GoIrishBeatStanford TheFoxJumps
 S->C CLRTOSCAN OK GoIrishBeatStanford 1 data/FB001.dat 127.0.0.1 54000 BinaryFilePNG
+
+Client fetches the file
 ```
 
 C2 is a different terminal and the secret set changing client.
