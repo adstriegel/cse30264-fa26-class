@@ -27,7 +27,7 @@ Write Python code to do the following:
 
 11. Count how many pure ACKs are sent from the client to the server and the server to the client.  State those numbers.
 
-A pure ACK is a TCP packet that does not have a payload (e.g. no data, the only if the ACK flag being set and any relevant TCP Options being present).  Think about how you might detect a pure ACK.
+A pure ACK is a TCP packet that does not have a payload (e.g. no data, the only if the ACK flag being set and / or any relevant TCP Options being present).  Think about how you might detect a pure ACK.
 
 Is there a certain size that you might expect or be able to use as a trigger?  Hint: The Layer 2 information (Ethernet) is usually 14 bytes.  What is the usual size of the IPv4 header?  Can you determine the TCP header size?  Can you look at the IP + TCP header sizes?
 
