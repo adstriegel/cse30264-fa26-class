@@ -4,8 +4,8 @@ In Part 2, we will pivot into writing the client and server parts where you will
 
 | **Due Date** | **Part / Description** |
 |---|---|
-| 11-01-26 | Part 2 - Dispatch + Work |
-| 11-15-26 | Part 3 - Multiple Clients, Group-Proposed Features |
+| 11-04-26 | Part 2 - Dispatch + Work |
+| 11-18-26 | Part 3 - Multiple Clients, Group-Proposed Features |
 
 ## The Story Continues
 
