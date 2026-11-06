@@ -48,6 +48,12 @@ For instance, consider the following enhancements:
    * Tell the client to clear its cache after the next job is complete
    * Tell the client to exit after the next round of processing
 * Write the underlying C code to do a comparison to determine the amount of redundancy or overlap between the two files (or find an existing utility / library to assist)
+* Add in various protections
+   * Restrict any of the servers to only allow hosts from certain ranges of IP addresses
+   * Create a ban list to specifically disallow certain IP addresses
+   * Disallow the backdoor mechanism or allow it from only certain IP addresses
+* Add in various logging features
+   * Record where various hosts connected from
 
 You may also propose appropriate features of your own choosing as you see fit (console, background threads, etc.).
 
