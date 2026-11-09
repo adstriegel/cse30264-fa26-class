@@ -1,4 +1,4 @@
-# Coding Project 1 - Part 2
+# Coding Project 1 - Part 3
 
 For Part 3, you will working with multiple clients and proposing various features.  There is a mandatory part of this project and the proposed feature part.
 
