@@ -4,7 +4,7 @@
 
 Finally, we made it to the link layer (Layer 2).  We will have a bit of a wrap up on the DNS content due to the technical issues on Monday and then we will dive deep into the link layer looking at the differences between switches and routers.  We will work through a bit on revisiting how NATs work from the mid-term exam and then get into how channel access operates when the channel or network link is shared.  As time allows, we will work into ARP and VLANs though that content will likely slip to next week.
 
-## Readings - Lecture 18
+## Readings - Lecture 17
 
 * Chapter 6 - Kurose / Ross - Link Layer
 
