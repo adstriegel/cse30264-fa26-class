@@ -35,7 +35,7 @@ For instance, consider the following enhancements:
 * Modify your server from Part 2 and full client to use a proper authentication.  For instance, is there something with public / private keys or hashing?
 * Complete the same approach for `grab-server` and `grab-client`
 * Modify `full-client` to push status updates to an MQTT server
-   * Information on the MQTT server (login / password) can be found on Canvas
+   * Information on the MQTT server (login / password) can be found on Canvas in the Files / Homework directory.
    * Select a channel with a clever name to distinguish your system
 * Augment any of the servers to do the same thing
 * Write a MQTT client that subscribes to your channel(s)
