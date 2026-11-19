@@ -59,6 +59,8 @@ You may also propose appropriate features of your own choosing as you see fit (c
 
 Describe your features and what you have implemented in the `README-Part3-Group.md` file.
 
+Example code from a summer offering on the Internet of Things can be found [here](https://github.com/adstriegel/cse34468-su24/tree/main/hw/lab-04).  It includes code for Flask as well as example MQTT code (connecting to the same MQTT server but with a different username / password).
+
 ## Notes
 
 * Everyone should be contributing to each part of the project which means commits of a reasonable size from all group members.  One evaluation item (homework) near the end will be to share an evaluation of your fellow group members and their respective contributions.
